@@ -1,0 +1,257 @@
+/* Final semantic palette. This file is intentionally last so the former olive
+   workspace theme cannot leak into individual components. */
+:root {
+  --shadow-ink: #f5edff;
+  --shadow-soft: #c9b8d9;
+  --shadow-dim: #9e8bb3;
+  --shadow-lilac: #d7b5ff;
+  --shadow-violet: #aa7bd4;
+  --shadow-pink: #efaecf;
+  --shadow-cyan: #a9c8ff;
+  --shadow-amber: #f4bd8c;
+  --shadow-panel: #241d37;
+  --shadow-panel-2: #2d2342;
+  --shadow-border: #b68bd83d;
+}
+
+body .anime-shell { color: var(--shadow-ink); }
+body .anime-shell a { color: var(--shadow-lilac); }
+body .anime-shell button:focus-visible,
+body .anime-shell a:focus-visible { outline-color: var(--shadow-lilac); }
+body .anime-shell input:focus,
+body .anime-shell textarea:focus,
+body .anime-shell select:focus { border-color: var(--shadow-lilac) !important; box-shadow: 0 0 0 3px #bf8fe41c; }
+
+/* Navigation and global chrome */
+body .anime-shell .sidebar-recent > button { color: var(--shadow-soft); }
+body .anime-shell .sidebar-recent > button:hover,
+body .anime-shell .sidebar-recent > button.recent-current { background: linear-gradient(90deg, #a875ca35, #a875ca0d); color: #f4e6ff; box-shadow: inset 3px 0 var(--shadow-lilac); }
+body .anime-shell .sidebar-recent > p,
+body .anime-shell .owner small,
+body .anime-shell .breadcrumbs,
+body .anime-shell .connection-pill { color: var(--shadow-dim); }
+body .anime-shell .owner strong,
+body .anime-shell .breadcrumbs strong { color: var(--shadow-ink); }
+body .anime-shell .owner > svg,
+body .anime-shell .review-button svg { color: var(--shadow-lilac); }
+body .anime-shell .owner { border-color: var(--shadow-border); }
+body .anime-shell .task-dot { background: #776687; }
+body .anime-shell .task-dot.running { background: var(--shadow-lilac); box-shadow: 0 0 9px #d6b3ff80; }
+body .anime-shell .task-dot.waiting_approval,
+body .anime-shell .task-dot.waiting_input { background: var(--shadow-amber); }
+body .anime-shell .connection-pill > i { background: #786886; }
+body .anime-shell .connection-pill.online > i { background: var(--shadow-cyan); box-shadow: 0 0 8px #a9c8ff66; }
+body .anime-shell .review-button.has-review { color: var(--shadow-pink); }
+body .anime-shell .sidebar nav button,
+body .anime-shell .sidebar-bottom nav button { color: #bca9cf; }
+body .anime-shell .sidebar nav button svg,
+body .anime-shell .sidebar-bottom nav button svg { color: #a994bd; }
+body .anime-shell .sidebar nav button.selected,
+body .anime-shell .sidebar-bottom nav button.selected { color: #f5eaff; }
+body .anime-shell .sidebar nav button.selected svg,
+body .anime-shell .sidebar-bottom nav button.selected svg { color: var(--shadow-pink); }
+body .anime-shell .nav-count { background: #a775c72b; color: #e8ccfb; }
+
+/* Shared typography and utility controls */
+body .anime-shell .section-description,
+body .anime-shell .subtle-badge,
+body .anime-shell .muted-small,
+body .anime-shell .form-note,
+body .anime-shell .device-row small,
+body .anime-shell .command-row small,
+body .anime-shell .compact-file small,
+body .anime-shell .preview-footer,
+body .anime-shell .version-history,
+body .anime-shell .message-label > time { color: var(--shadow-dim) !important; }
+body .anime-shell .text-btn,
+body .anime-shell .icon-btn,
+body .anime-shell .danger { color: var(--shadow-lilac); }
+body .anime-shell .text-btn:hover,
+body .anime-shell .icon-btn:hover { color: #f5ddff; background: #b685d01c; }
+body .anime-shell .danger { color: #ff9ebc; }
+body .anime-shell .tabs { color: var(--shadow-dim); }
+body .anime-shell .tabs .active { color: var(--shadow-ink); }
+body .anime-shell .tabs b { background: #a875ca28; color: var(--shadow-lilac); }
+body .anime-shell input::placeholder,
+body .anime-shell textarea::placeholder { color: #88759c; }
+body .anime-shell .suggestions > button > svg:last-child { color: var(--shadow-pink); }
+body .anime-shell .model-chip { color: #d8c2e9; border-color: var(--shadow-border); }
+body .anime-shell .model-dot { background: var(--shadow-pink); box-shadow: 0 0 8px #efaecf70; }
+body .anime-shell .model-chip > svg,
+body .anime-shell .composer-caption > svg,
+body .anime-shell .composer .icon-btn { color: var(--shadow-lilac); }
+body .anime-shell .enter-hint,
+body .anime-shell .composer-caption { color: var(--shadow-dim); }
+
+/* Overview context and live activity */
+body .anime-shell .context-heading,
+body .anime-shell .context-heading > svg,
+body .anime-shell .context-stats span,
+body .anime-shell .context-section h3 { color: var(--shadow-soft); }
+body .anime-shell .context-stats strong { color: #f0ddff; }
+body .anime-shell .context-stats > div + div,
+body .anime-shell .context-section { border-color: var(--shadow-border); }
+body .anime-shell .activity-dot { background: var(--shadow-violet); }
+body .anime-shell .activity-dot.completed { background: var(--shadow-cyan); }
+body .anime-shell .activity-dot.error { background: #ff8fab; }
+body .anime-shell .activity-item p { color: var(--shadow-soft); }
+body .anime-shell .activity-item time { color: var(--shadow-dim); }
+body .anime-shell .connected-tool { color: var(--shadow-soft); }
+body .anime-shell .connected-tool > i { background: #766481; }
+body .anime-shell .connected-tool > i.ready { background: var(--shadow-cyan); }
+body .anime-shell .attention-card { background: #aa719329; border-color: #e0a1c14d; }
+body .anime-shell .attention-card strong { color: #f7d9eb; }
+body .anime-shell .attention-card p { color: #c9a9be; }
+body .anime-shell .private-note > svg { color: var(--shadow-pink); }
+body .anime-shell .private-note strong { color: #f0dcfb; }
+body .anime-shell .private-note p { color: var(--shadow-soft); }
+body .anime-shell .tiny-dot { background: var(--shadow-pink); box-shadow: 0 0 7px #efaecf66; }
+body .anime-shell .quiet-state,
+body .anime-shell .quiet-state p { color: var(--shadow-dim); }
+body .anime-shell .quiet-state { border-color: #a47bc150; }
+body .anime-shell .quiet-orbit { border-color: #b68ad064; }
+body .anime-shell .quiet-orbit::after { background: var(--shadow-pink); box-shadow: 0 0 8px #efaecf66; }
+body .anime-shell .context-stats { border-color: var(--shadow-border); }
+
+/* Empty states */
+body .anime-shell .empty,
+body .anime-shell .empty-inline { background: #a979c50c; border-color: #ba92d347; color: var(--shadow-soft); }
+body .anime-shell .empty-icon { background: #a879c525; border-color: #c399df55; color: var(--shadow-lilac); }
+body .anime-shell .empty h3 { color: var(--shadow-ink); }
+body .anime-shell .empty p,
+body .anime-shell .empty-inline p { color: var(--shadow-soft); }
+
+/* Tasks, status chips, conversation */
+body .anime-shell .task-list { border-color: var(--shadow-border); background: var(--shadow-panel); }
+body .anime-shell .task-row { background: transparent; border-color: var(--shadow-border); }
+body .anime-shell .task-row:hover { background: #a774c91a; }
+body .anime-shell .task-row strong { color: var(--shadow-ink); }
+body .anime-shell .task-row > div > span,
+body .anime-shell .task-row > svg { color: var(--shadow-dim); }
+body .anime-shell .task-row-icon { background: #a274c328; color: var(--shadow-lilac); }
+body .anime-shell .task-row-icon.completed { background: #759ce226; color: var(--shadow-cyan); }
+body .anime-shell .status { color: var(--shadow-soft); background: #9d72bd12; border-color: #b68cd43d; }
+body .anime-shell .status.running { color: var(--shadow-lilac); background: #a978d125; border-color: #c79be058; }
+body .anime-shell .status.waiting_approval,
+body .anime-shell .status.waiting_input { color: var(--shadow-amber); background: #c7855520; border-color: #e6ae7650; }
+body .anime-shell .status.failed { color: #ff9ab7; background: #c55b7a18; border-color: #e780a047; }
+body .anime-shell .status.cancelled,
+body .anime-shell .status.paused { color: #ad9abb; border-color: #8b769d47; }
+body .anime-shell .status.completed { color: var(--shadow-cyan); background: #7199df1d; border-color: #97b8ef52; }
+body .anime-shell .thread-toolbar { color: var(--shadow-dim); border-color: var(--shadow-border); background: var(--bg); }
+body .anime-shell .task-controls { color: var(--shadow-lilac); }
+body .anime-shell .message-label { color: #ead9f5; }
+body .anime-shell .tool-message { background: #1a1529; border-color: #8d6baa4d; color: var(--shadow-soft); }
+body .anime-shell .tool-message strong,
+body .anime-shell .markdown h1,
+body .anime-shell .markdown h2,
+body .anime-shell .markdown h3 { color: var(--shadow-ink); }
+body .anime-shell .markdown code { background: #b184cf24; color: #e2c8fa; }
+body .anime-shell .markdown blockquote { border-color: var(--shadow-violet); color: var(--shadow-soft); }
+body .anime-shell .pulse-dots i { background: var(--shadow-lilac); }
+body .anime-shell .working { color: var(--shadow-lilac); }
+body .anime-shell .working > span:last-child { color: var(--shadow-dim); }
+body .anime-shell .compact-file { color: var(--shadow-soft); border-color: var(--shadow-border); }
+body .anime-shell .compact-file > svg:last-child { color: var(--shadow-lilac); }
+
+/* Approval inbox */
+body .anime-shell .approval-section { background: #7e4c6720; border-color: #d894b45c; }
+body .anime-shell .approval-section > h2 { color: #f3cbe0; }
+body .anime-shell .approval-card { background: #302136; border-color: #d397b44a; }
+body .anime-shell .approval-icon { background: #d180a328; color: var(--shadow-pink); }
+body .anime-shell .approval-card header strong { color: #f5dce9; }
+body .anime-shell .approval-card header > div > span,
+body .anime-shell .approval-card > p,
+body .anime-shell .approval-card .subtle-badge,
+body .anime-shell .approval-card .text-btn { color: #c9aabd; }
+body .anime-shell .command-preview { background: #171020; color: #e3c7d8; }
+
+/* Library */
+body .anime-shell .artifact-card { background: linear-gradient(145deg, #2a213c, #211a32); border-color: var(--shadow-border); }
+body .anime-shell .artifact-card:hover { border-color: #d2a7ee80; }
+body .anime-shell .artifact-cover { color: var(--shadow-lilac); background: repeating-linear-gradient(0deg,transparent,transparent 23px,#ae7ed319 24px),repeating-linear-gradient(90deg,transparent,transparent 23px,#ae7ed319 24px),#241a36; }
+body .anime-shell .artifact-cover > span { background: #151020cc; border-color: #bd94d84f; color: #ddc4ef; }
+body .anime-shell .artifact-info strong { color: var(--shadow-ink); }
+body .anime-shell .artifact-info p { color: var(--shadow-dim); }
+body .anime-shell .info-strip { background: #9e71bf16; border-color: #b88dd044; color: var(--shadow-soft); }
+body .anime-shell .info-strip > svg { color: var(--shadow-lilac); }
+body .anime-shell .search-field { color: var(--shadow-dim); border-color: var(--shadow-border); background: #1b1529; }
+body .anime-shell .search-field input { color: var(--shadow-ink); }
+
+/* Memory and skills */
+body .anime-shell .memory-card { background: linear-gradient(135deg,#2a213c,#211a31); border-color: var(--shadow-border); }
+body .anime-shell .memory-marker { background: #a578c42b; color: var(--shadow-lilac); }
+body .anime-shell .memory-card p { color: #e5d5ef; }
+body .anime-shell .memory-card > div > span,
+body .anime-shell .memory-card .icon-btn { color: var(--shadow-dim); }
+body .anime-shell .skill-card { background: linear-gradient(140deg,#2d2240,#201a31); border-color: var(--shadow-border); }
+body .anime-shell .skill-state { color: var(--shadow-soft); border-color: #a77bc550; }
+body .anime-shell .skill-state.enabled { color: var(--shadow-cyan); background: #7199df1d; border-color: #97b8ef52; }
+body .anime-shell .skill-card h3 { color: var(--shadow-ink); }
+body .anime-shell .skill-card > p { color: var(--shadow-soft); }
+body .anime-shell .skill-tags span { background: #a675c528; color: #dbc0ed; }
+body .anime-shell .skill-card footer { border-color: var(--shadow-border); color: var(--shadow-dim); }
+
+/* Connections and registered commands */
+body .anime-shell .connection-card h3,
+body .anime-shell .commands-section h2,
+body .anime-shell .command-row strong { color: var(--shadow-ink); }
+body .anime-shell .connection-category,
+body .anime-shell .commands-section p,
+body .anime-shell .command-row small { color: var(--shadow-dim); }
+body .anime-shell .connection-card > p { color: var(--shadow-soft); }
+body .anime-shell .connection-status { color: var(--shadow-soft); }
+body .anime-shell .connection-status i { background: #826d91; }
+body .anime-shell .connection-status.ready { color: var(--shadow-cyan); }
+body .anime-shell .connection-status.ready i { background: var(--shadow-cyan); }
+body .anime-shell .connection-status.error { color: #ff9bb7; }
+body .anime-shell .connection-status.error i { background: #ff83a7; }
+body .anime-shell .connection-status.needs_login { color: var(--shadow-amber); }
+body .anime-shell .connection-status.needs_login i { background: var(--shadow-amber); }
+body .anime-shell .command-row { background: #261e38; border-color: var(--shadow-border); }
+body .anime-shell .command-row > svg,
+body .anime-shell .command-row code { color: var(--shadow-lilac); }
+body .anime-shell .connection-card footer { color: var(--shadow-dim); }
+
+/* Settings, dialogs, pairing */
+body .anime-shell .settings-title,
+body .anime-shell .settings-title > svg { color: var(--shadow-lilac); }
+body .anime-shell .settings-title h2,
+body .anime-shell .form > h3,
+body .anime-shell .device-row strong,
+body .anime-shell .modal h2 { color: var(--shadow-ink); }
+body .anime-shell .api-settings { border-color: var(--shadow-border); }
+body .anime-shell .api-settings summary,
+body .anime-shell .pair-code code { color: var(--shadow-lilac); }
+body .anime-shell .provider-setting,
+body .anime-shell .device-row { border-color: var(--shadow-border); }
+body .anime-shell .form .checkbox-label,
+body .anime-shell .setup-steps,
+body .anime-shell .device-row { color: var(--shadow-soft); }
+body .anime-shell .setup-steps code,
+body .anime-shell .form-note code,
+body .anime-shell .device-row > svg { color: var(--shadow-lilac); }
+body .anime-shell .checkbox-label input { accent-color: var(--shadow-violet); }
+body .anime-shell .pair-code { background: #a675c51a; border-color: #b98ed250; }
+body .anime-shell .pair-code small { color: var(--shadow-dim); }
+body .anime-shell .modal-backdrop { background: #090611c9; }
+body .anime-shell .modal > header { border-color: var(--shadow-border); }
+body .anime-shell .code-input,
+body .anime-shell .code-preview,
+body .anime-shell .artifact-preview pre { background: #151020; border-color: #966eb84f; color: #dec8ee; }
+body .pair-screen .pair-brand,
+body .pair-screen .pair-card h1 { color: var(--shadow-ink); }
+body .pair-screen .pair-card { background: linear-gradient(145deg,#2a203d,#201830); border-color: #bf91dc4d; }
+body .pair-screen .pair-card > p,
+body .pair-screen .pair-card label,
+body .pair-screen .pair-footer { color: var(--shadow-soft); }
+body .loading-screen { color: var(--shadow-soft); }
+
+/* Mobile rules in the old stylesheet used hard-coded olive values. */
+@media (max-width: 760px) {
+  body .anime-shell .breadcrumbs > .mobile-menu svg { color: var(--shadow-lilac); }
+  body .anime-shell .mobile-bottom { background: #1d152bf2; border-color: #ba8fd842; }
+  body .anime-shell .mobile-bottom > button { color: #aa95bd; }
+  body .anime-shell .mobile-bottom > button.selected,
+  body .anime-shell .mobile-bottom > button.selected svg { color: #efc8ff; }
+}

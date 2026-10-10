@@ -1,0 +1,82 @@
+{
+  "name": "shadow-assistant",
+  "productName": "Shadow",
+  "description": "A local-first personal assistant for research, creation, automation, and business workflows.",
+  "author": "Rohit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "desktop-build/desktop/main.js",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev": "tsx watch server/index.ts",
+    "dev:ui": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "start": "tsx server/index.ts",
+    "test": "tsx --test tests/*.test.ts",
+    "check": "tsc --noEmit",
+    "test:browser": "tsx tests/browser-smoke.ts",
+    "check:agy": "tsx scripts/check-agy.ts",
+    "check:tools": "tsx scripts/check-tools.ts",
+    "desktop:icons": "node scripts/build-icons.mjs",
+    "desktop:compile": "tsc -p tsconfig.desktop.json",
+    "desktop:dev": "npm run build && npm run desktop:compile && npm run desktop:icons && electron .",
+    "desktop:build": "npm run build && npm run desktop:compile && npm run desktop:icons && electron-builder --win nsis"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^11.0.2",
+    "@fastify/rate-limit": "^10.3.0",
+    "@fastify/static": "^10.1.5",
+    "cheerio": "^1.1.2",
+    "fastify": "^5.6.0",
+    "lucide-react": "^0.468.0",
+    "playwright-core": "^1.56.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-markdown": "^10.1.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "electron": "^44.7.0",
+    "electron-builder": "^26.15.3",
+    "png-to-ico": "^3.0.2",
+    "prettier": "^3.6.2",
+    "sharp": "^0.35.5",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.1.0"
+  },
+  "build": {
+    "appId": "com.shadow.assistant",
+    "productName": "Shadow",
+    "artifactName": "Shadow-Setup-${version}.${ext}",
+    "asar": true,
+    "files": [
+      "dist/**/*",
+      "desktop-build/**/*",
+      "build-assets/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "build-assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": "always",
+      "createStartMenuShortcut": true,
+      "shortcutName": "Shadow",
+      "runAfterFinish": false
+    }
+  }
+}
